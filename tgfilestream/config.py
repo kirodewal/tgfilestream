@@ -19,7 +19,7 @@ import os
 from yarl import URL
 
 try:
-    port = int(os.environ.get("PORT", "22"))
+    port = int(os.environ.get("PORT", "3289"))
 except ValueError:
     port = -1
 if not 1 <= port <= 65535:
