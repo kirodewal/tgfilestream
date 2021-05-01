@@ -19,7 +19,7 @@ import os
 from yarl import URL
 
 try:
-    port = int(os.environ.get("PORT", "3289"))
+    port = int(os.environ.get("PORT", "8080"))
 except ValueError:
     port = -1
 if not 1 <= port <= 65535:
@@ -35,7 +35,7 @@ except (KeyError, ValueError):
     sys.exit(1)
 
 trust_headers = bool(os.environ.get("TRUST_FORWARD_HEADERS"))
-host = os.environ.get("HOST", "0.0.0.0")
+host = os.environ.get("HOST", "100.106.246.181")
 public_url = URL(os.environ.get("PUBLIC_URL", f"http://{host}:{port}"))
 
 session_name = os.environ.get("TG_SESSION_NAME", "tgfilestream")
